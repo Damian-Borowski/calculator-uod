@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kalkulator Umowa o dzieło</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+      <div class="container-fluid shadow-sm rounded col-lg-4">
+        <div class="row">
+          <div class="col">
+            <h2 class="text-center">Kalkulator</h2>
+            <p class="text-center">Umowa o dzieło</p>
+          </div>
+        </div>
+      <form>
+        <div class="row justify-content-md-center">
+          <div class="col-lg">
+            <label for="brutto">Kwota brutto</label>
+            <div class="input-group-prepend">
+              <input type="number" class="kwota-brutto form-control" placeholder="Kwota brutto">
+              <span class="input-group-text" id="inputGroupPrepend2">zł</span>
+            </div>
+            <small id="help" id="brutto" class="form-text text-muted">Wpisz kwotę brutto i wciśnij przycisk</small>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-sm-auto">
+            <button class="oblicz btn btn-primary" type="submit">Oblicz</button>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-lg">
+            <label for="ubezpieczenie">Ubezpieczenie zdrowotne</label>
+            <div class="input-group-prepend">
+            <input type="number" id="ubezpieczenie" class="zdrowotne form-control" placeholder="Ubezpieczenie zdrowotne" disabled>
+            <span class="input-group-text" id="inputGroupPrepend2">zł</span>
+            </div>
+            <small id="help" class="form-text text-muted">Ubezpieczenie zdrowotne zawsze "0"</small>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-lg">
+            <label for="koszty">Koszty uzyskania przychodu</label>
+            <div class="input-group-prepend">
+            <input type="number" id="koszty" class="koszty form-control" placeholder="Koszty uzyskania" disabled>
+            <span class="input-group-text" id="inputGroupPrepend2">zł</span>
+            </div>
+            <small id="help" class="form-text text-muted">Zawsze 20% kwoty brutto</small>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-lg">
+            <label for="naliczona">Naliczona zaliczka na podatek</label>
+            <div class="input-group-prepend">
+            <input type="number" id="naliczona" class="naliczona form-control" placeholder="Naliczona zaliczka" disabled>
+            <span class="input-group-text" id="inputGroupPrepend2">zł</span>
+            </div>
+            <small id="help" class="form-text text-muted">Kwota brutto minus koszty uzyskania przychodu x 17%</small>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-lg">
+            <label for="pobrana">Pobrana zaliczka na podatek</label>
+            <div class="input-group-prepend">
+            <input type="number" id="pobrana" class="pobrana form-control" placeholder="Pobrana zaliczka" disabled>
+            <span class="input-group-text" id="inputGroupPrepend2">zł</span>
+            </div>
+            <small id="help" class="form-text text-muted">Zaokrąglona zaliczka na podatek</small>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-lg">
+            <label class="important" for="wyplata">Do wypłaty</label>
+            <div class="input-group-prepend">
+            <input type="number" id="wyplata" class="wyplata form-control" placeholder="Do wypłaty" disabled>
+            <span class="input-group-text" id="inputGroupPrepend2">zł</span>
+            </div>
+            <small id="help" class="form-text text-muted">Kwota brutto minus pobrana zaliczka na podatek</small>
+          </div>
+        </div>
+      </form>
+      </div>
+      <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
